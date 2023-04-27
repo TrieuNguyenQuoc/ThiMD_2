@@ -3,7 +3,7 @@ package views;
 import controller.StudentsManagement;
 import model.Student;
 import storage.ReadAndWrite;
-//import storage.ReadAndWrite;
+import storage.IReadAndWrite;
 
 import java.util.List;
 import java.util.Scanner;
@@ -92,7 +92,7 @@ public class Clients {
                 if (sexChoice==1){
                     sex = "Nam";
                 }else if(sexChoice==2){
-                    sex = "Nữ";
+                    sex = "Nữ";
                 }else {
                     System.out.println("Lựa chọn sai, mời nhập lại!");
                 }

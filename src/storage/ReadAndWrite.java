@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class ReadAndWrite implements IReadAndWrite {
     @Override
     public void writeFile(Object file){
-        File f = new File("Past_Module_2.csv");
+        File f = new File("data/students.csv");
         OutputStream os = null;
         try {
             os = new FileOutputStream(f);
@@ -42,7 +42,7 @@ public class ReadAndWrite implements IReadAndWrite {
     public Object readFile() {
         InputStream is = null;
         try {
-            is = new FileInputStream("Past_module_2.csv");
+            is = new FileInputStream("data/students.csv");
         } catch (FileNotFoundException e) {
             System.out.println("File không tồn tại, Nhâp lại thông tin để khởi tạo file" +
                     "3khởi động lại chương trình.");
