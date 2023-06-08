@@ -1,23 +1,25 @@
 package model;
 
-public class Student {
-    private String id; // ma sinh vien
-    private String name;// ten
-    private int age; // tuoi
-    private String sex; // gioi tinh
-    private String address; // dia chi
-    private double averagePoints; // diem tb
+import java.io.Serializable;
+
+public class Student implements Serializable {
+    private String id;
+    private String fullName;
+    private int age;
+    private String gender;
+    private String address;
+    private double mediumScore;
 
     public Student() {
     }
 
-    public Student(String id, String name, int age, String sex, String address, double averagePoints) {
+    public Student(String id, String fullName, int age, String gender, String address, double mediumScore) {
         this.id = id;
-        this.name = name;
+        this.fullName = fullName;
         this.age = age;
-        this.sex = sex;
+        this.gender = gender;
         this.address = address;
-        this.averagePoints = averagePoints;
+        this.mediumScore = mediumScore;
     }
 
     public String getId() {
@@ -28,12 +30,12 @@ public class Student {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public int getAge() {
@@ -44,12 +46,12 @@ public class Student {
         this.age = age;
     }
 
-    public String getSex() {
-        return sex;
+    public String getGender() {
+        return gender;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getAddress() {
@@ -60,23 +62,24 @@ public class Student {
         this.address = address;
     }
 
-    public double getAveragePoints() {
-        return averagePoints;
+    public double getMediumScore() {
+        return mediumScore;
     }
 
-    public void setAveragePoints(double averagePoints) {
-        this.averagePoints = averagePoints;
+    public void setMediumScore(double mediumScore) {
+        this.mediumScore = mediumScore;
     }
 
     @Override
     public String toString() {
-        return "Students{" +
+        return "Student " +
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", age='" + age + '\'' +
-                ", sex='" + sex + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
                 ", address='" + address + '\'' +
-                ", averagePoints=" + averagePoints +
-                '}';
+                ", mediumScore=" + mediumScore +
+                '\n';
     }
+
 }
